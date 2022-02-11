@@ -19,7 +19,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("ApplicationDbContext"),
-        b => b.MigrationsAssembly("DelocamentoApp.Data"));
+        b => b.MigrationsAssembly("DeslocamentoApp.Data"));
 });
 
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
